@@ -13,7 +13,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.get('/', (req, res, next) => {
-    res.render('index.html');
+    res.render('public/index.html');
 });
 
 app.get('/favicon.ico', (req, res, next) => {
@@ -32,6 +32,6 @@ io.on('connection', socket => {
     });
 });
 
-app.listen(porta, () => {
+server.listen(porta, () => {
     console.log('Servidor rodando na porta '+ porta);
 });
