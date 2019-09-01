@@ -16,7 +16,7 @@
     </form>
 
     <script type="text/javascript">
-        var socket = io('https://chat-socket1.herokuapp.com/');
+        var socket = io('http://localhost:3000');
 
         function renderMessage(message){
             $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');
