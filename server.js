@@ -12,11 +12,11 @@ app.set('views', path.join(__dirname, "public"));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use('/', (req, res, next) => {
+app.get('/', (req, res, next) => {
     res.render('index.html');
 });
 
-app.use('/favicon.ico', (req, res, next) => {
+app.get('/favicon.ico', (req, res, next) => {
     next();
 });
 
