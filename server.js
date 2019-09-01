@@ -32,4 +32,6 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(global.PORTA);
+app.listen(global.PORTA, () => {
+    console.log('Servidor rodando na porta '+ global.PORTA);
+});
